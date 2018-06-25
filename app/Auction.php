@@ -3,9 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-class User extends Model
-{
-    protected $table = 'user';
 
+class Auction extends Model
+{
+    protected $table = 'auction';
 
 }
