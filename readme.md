@@ -9,8 +9,10 @@
 
     php artisan key:generate
 
+
 #新增項目
-*ecommerce分支中 新增資料庫欄位migration和seed factory. 
+
+ecommerce分支中 新增資料庫欄位migration和seed factory. 
  <!--   
 ## About Laravel
 
