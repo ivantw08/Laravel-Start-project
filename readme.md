@@ -8,6 +8,18 @@
 注意:windows中.env的檔案，必須使用.env.才能夠執行
 
     php artisan key:generate
+
+
+
+#ecommerce branch 
+這個分支將進行電子商務網站的基本雛形，已經有使用MIGRATION新增基本欄位以及模型工廠新增假資料，要進行MIGRATION
+    php artisan migrate
+
+要進行模型工廠 
+
+    php artisan db:seed
+
+模型工廠假資料需要參考faker套件(http://goodjack.blogspot.com/2017/03/laravel-clone.html)
  <!--   
 ## About Laravel
 
