@@ -8,6 +8,9 @@
 注意:windows中.env的檔案，必須使用.env.才能夠執行
 
     php artisan key:generate
+
+#新增項目
+*ecommerce分支中 新增資料庫欄位migration和seed factory. 
  <!--   
 ## About Laravel
 
