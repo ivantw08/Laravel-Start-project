@@ -172,6 +172,7 @@ return [
         'jwt' => Dingo\Api\Auth\Provider\JWT::class
 
     ],
+
     /*
     |--------------------------------------------------------------------------
     | Throttling / Rate Limiting

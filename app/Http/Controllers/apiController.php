@@ -1,19 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Hash;
-
 use Tymon\JWTAuth\Facades\JWTAuth;
-
-use Tymon\JWTAuth\Facades\JWTFactory ;
-use Tymon\JWTAuth\Exceptions\JWTException;
-
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Crypt;
 
 
 class apiController extends Controller
