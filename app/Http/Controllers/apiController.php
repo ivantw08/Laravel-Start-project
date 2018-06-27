@@ -42,17 +42,11 @@ class apiController extends Controller
 
     public function login(Request $request)
     {
-        // $factory = JWTFactory::addClaims([
-        //     'sub' => env('API_ID'),
-        //     'name'=>'test',
-        //     'jdskfjd'=>'asdf'
-        // ]);
-        
-        // $payload = $factory->make();
-        
-        // $token = JWTAuth::encode($payload);
-        
-        // return ['HTTP_Authorization' => "Bearer {$token}"];
+        $input = $request->all();
+        if (!$token = JWTAuth::attempt($input)) {
+            return response()->json(['result' => '邮箱或密码错误.']);
+        }
+        return response()->json(['result' => $token]);
     }
 
     /*获取用户信息*/
