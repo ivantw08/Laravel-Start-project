@@ -20,9 +20,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', function ($api) {
- $api->post('login', 'App\Http\Controllers\apiController@login');
- $api->post('register', 'App\Http\Controllers\apiController@register');
- $api->post('user', 'App\Http\Controllers\apiController@get_user_details');
+ $api->post('login', 'App\Http\Controllers\AuthController@login');
+ $api->post('register', 'App\Http\Controllers\AuthController@register');
+ $api->post('user', 'App\Http\Controllers\AuthController@get_user_details');
  $api->group(['middleware' => 'api.auth'], function ($api) {
    // $api->get('user', 'App\Http\Controllers\apiController@get_user_details');
  });

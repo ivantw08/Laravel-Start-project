@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Facades\JWTAuth;
+use Illuminate\Support\Facades\Validator;
 
 
-class apiController extends Controller
+
+class AuthController extends Controller
 {
     protected $keyService;
 
@@ -41,7 +43,6 @@ class apiController extends Controller
         return response()->json(['result' => $token]);
     }
 
-    /*获取用户信息*/
     public function get_user_details(Request $request)
     {
         $authorization = $request->header('Authorization');
