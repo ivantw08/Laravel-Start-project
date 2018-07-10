@@ -24,7 +24,7 @@ $api->version('v1', function ($api) {
  $api->post('register', 'App\Http\Controllers\apiController@register');
  $api->post('user', 'App\Http\Controllers\apiController@get_user_details');
  $api->group(['middleware' => 'api.auth'], function ($api) {
-    $api->get('user', 'App\Http\Controllers\apiController@get_user_details');
+   // $api->get('user', 'App\Http\Controllers\apiController@get_user_details');
  });
 
 }); 

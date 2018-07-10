@@ -44,7 +44,10 @@ class apiController extends Controller
     /*获取用户信息*/
     public function get_user_details(Request $request)
     {
-        
+        $authorization = $request->header('Authorization');
+        //return $authorization;
+        $tokenData = JWTAuth::setToken($authorization)->authenticate();
+        return response()->json(['result' => $tokenData]);
     }
 
 }
